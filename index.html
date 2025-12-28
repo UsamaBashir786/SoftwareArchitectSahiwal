@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Architects CRM Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Access Architects CRM</h1>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#reports">Reports</a></li>
+                        <li><a href="#settings">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="user-menu">
+                    <span class="user-name">Welcome, User</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <aside class="sidebar">
+                <div class="sidebar-menu">
+                    <div class="menu-section">
+                        <h3>Main Menu</h3>
+                        <ul>
+                            <li><a href="#" class="menu-item active">Dashboard</a></li>
+                            <li><a href="#" class="menu-item">Clients</a></li>
+                            <li><a href="#" class="menu-item">Projects</a></li>
+                            <li><a href="#" class="menu-item">Tasks</a></li>
+                            <li><a href="#" class="menu-item">Calendar</a></li>
+                            <li><a href="#" class="menu-item">Documents</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3>Reports</h3>
+                        <ul>
+                            <li><a href="#" class="menu-item">Sales Report</a></li>
+                            <li><a href="#" class="menu-item">Performance</a></li>
+                            <li><a href="#" class="menu-item">Analytics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="dashboard-content">
+                <div class="dashboard-header">
+                    <h2>Dashboard Overview</h2>
+                    <div class="filter-controls">
+                        <input type="date" class="date-filter" id="startDate">
+                        <input type="date" class="date-filter" id="endDate">
+                        <button class="btn btn-primary">Filter</button>
+                    </div>
+                </div>
+
+                <div class="widgets-grid">
+                    <!-- Key Metrics Cards -->
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Total Clients</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="metric-value">127</p>
+                            <p class="metric-change positive">+12% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Active Projects</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="metric-value">34</p>
+                            <p class="metric-change positive">+5 this week</p>
+                        </div>
+                    </div>
+
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Pending Tasks</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="metric-value">89</p>
+                            <p class="metric-change negative">18 overdue</p>
+                        </div>
+                    </div>
+
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Revenue (This Month)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="metric-value">$45,230</p>
+                            <p class="metric-change positive">+8.5% growth</p>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activities -->
+                    <div class="widget card full-width">
+                        <div class="card-header">
+                            <h3>Recent Activities</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <table class="activity-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Activity</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tech Solutions Inc.</td>
+                                        <td>Project Started</td>
+                                        <td>2025-12-28</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Enterprises</td>
+                                        <td>Meeting Scheduled</td>
+                                        <td>2025-12-27</td>
+                                        <td><span class="badge badge-info">Scheduled</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digital Systems Ltd.</td>
+                                        <td>Proposal Sent</td>
+                                        <td>2025-12-26</td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Future Innovations</td>
+                                        <td>Contract Signed</td>
+                                        <td>2025-12-25</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Upcoming Events</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="event-item">
+                                <span class="event-date">Dec 30</span>
+                                <div class="event-details">
+                                    <p class="event-title">Client Meeting</p>
+                                    <p class="event-time">2:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <span class="event-date">Dec 31</span>
+                                <div class="event-details">
+                                    <p class="event-title">Project Review</p>
+                                    <p class="event-time">10:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <span class="event-date">Jan 5</span>
+                                <div class="event-details">
+                                    <p class="event-title">Team Kickoff</p>
+                                    <p class="event-time">3:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="widget card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="card-body quick-actions">
+                            <button class="btn btn-secondary">New Client</button>
+                            <button class="btn btn-secondary">New Project</button>
+                            <button class="btn btn-secondary">New Task</button>
+                            <button class="btn btn-secondary">Generate Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Access Architects CRM. All rights reserved.</p>
+            <p>Last updated: 2025-12-28 15:55:13 UTC</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
